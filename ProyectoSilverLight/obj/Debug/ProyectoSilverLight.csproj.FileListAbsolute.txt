@@ -1,0 +1,12 @@
+c:\users\carme\documents\visual studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\Bin\Debug\ProyectoSilverLight.dll
+c:\users\carme\documents\visual studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\Bin\Debug\ProyectoSilverLight.pdb
+c:\users\carme\documents\visual studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\Bin\Debug\AppManifest.xaml
+c:\users\carme\documents\visual studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\Bin\Debug\ProyectoSilverLight.xap
+c:\users\carme\documents\visual studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\Bin\Debug\ProyectoSilverLightTestPage.html
+c:\users\carme\documents\visual studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\obj\Debug\ProyectoSilverLight.csprojResolveAssemblyReference.cache
+c:\users\carme\documents\visual studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\obj\Debug\App.g.cs
+c:\users\carme\documents\visual studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\obj\Debug\MainPage.g.cs
+c:\users\carme\documents\visual studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\obj\Debug\ProyectoSilverLight.g.resources
+c:\users\carme\documents\visual studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\obj\Debug\ProyectoSilverLight.dll
+c:\users\carme\documents\visual studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\obj\Debug\ProyectoSilverLight.pdb
+c:\users\carme\documents\visual studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\obj\Debug\XapCacheFile.xml

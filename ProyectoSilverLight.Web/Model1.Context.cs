@@ -13,10 +13,10 @@ namespace ProyectoSilverLight.Web
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class proyectoEntities : DbContext
+    public partial class proyectoEntities1 : DbContext
     {
-        public proyectoEntities()
-            : base("name=proyectoEntities")
+        public proyectoEntities1()
+            : base("name=proyectoEntities1")
         {
         }
     
