@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4c3518b4046b46e7b03664cfeb4c028f" Name="Diagram1">
+        <EntityTypeShape EntityType="proyectoModel.ATRIBUTO" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="proyectoModel.ATRIBUTOPERMITIDO" Width="1.5" PointX="5.25" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="proyectoModel.CARACTERISTICA" Width="1.5" PointX="1.5" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="proyectoModel.CARACTERISTICAPRODUCTO" Width="1.5" PointX="6" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="proyectoModel.CIUDAD" Width="1.5" PointX="14.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="proyectoModel.CLIENTE" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="proyectoModel.CUESTIONARIO" Width="1.5" PointX="3.5" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="proyectoModel.DIMENSION" Width="1.5" PointX="3" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="proyectoModel.DIRECCION" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="proyectoModel.DISTRITO" Width="1.5" PointX="12.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="proyectoModel.FACTURA" Width="1.5" PointX="5.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="proyectoModel.INVPRODUCTO" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="proyectoModel.LINEA" Width="1.5" PointX="8" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="proyectoModel.LINEAPRODUCTO" Width="1.5" PointX="1.5" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="proyectoModel.LISTAPRECIO" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="proyectoModel.MONEDA" Width="1.5" PointX="10.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="proyectoModel.PAIS" Width="1.5" PointX="7.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="proyectoModel.PREGUNTA" Width="1.5" PointX="5.75" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="proyectoModel.PREGUNTAPERMITIDA" Width="1.5" PointX="8" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="proyectoModel.PRODUCTO" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="proyectoModel.PROVEEDOR" Width="1.5" PointX="8.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="proyectoModel.PROVINCIA" Width="1.5" PointX="10" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="proyectoModel.RESPUESTACUESTIONARIO" Width="1.5" PointX="5.75" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="proyectoModel.SUBCARACTERISTICAS" Width="1.5" PointX="3.75" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="proyectoModel.TARJETA" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="proyectoModel.CONFUGURACION" Width="1.5" PointX="10.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="proyectoModel.NAVEGACION" Width="1.5" PointX="8" PointY="13.75" IsExpanded="true" />
+        <AssociationConnector Association="proyectoModel.ATRIBUTO_PRODUCTO_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="proyectoModel.ATRIBUTOPERMITIDO_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="proyectoModel.CARACTERISTICA_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="proyectoModel.SUBCARACTERISTICAS_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="proyectoModel.CARACTERISTICAPRODUCTO_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="proyectoModel.CARACTERISTICAPRODUCTO_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="proyectoModel.CIUDAD_DISTRITO_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="proyectoModel.LISTAPRECIO_CLIENTE_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="proyectoModel.NAVEGACION_CLIENTE_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="proyectoModel.TARJETA_CLIENTE_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="proyectoModel.PREGUNTA_CUESTIONARIO_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="proyectoModel.DIMENSION_PRODUCTO_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="proyectoModel.DISTRITO_PROVINCIA_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="proyectoModel.LINEA_FACTURA_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="proyectoModel.LINEA_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="proyectoModel.LINEA_PRODUCTO_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="proyectoModel.LISTAPRECIO_PRODUCTO_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="proyectoModel.PROVINCIA_PAIS_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="proyectoModel.PREGUNTAPERMITIDA_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="proyectoModel.PREGUNTAPERMITIDA_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="proyectoModel.NAVEGACION_FK1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

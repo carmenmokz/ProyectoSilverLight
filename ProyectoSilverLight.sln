@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoSilverLight", "ProyectoSilverLight\ProyectoSilverLight.csproj", "{45495D74-4749-4318-AF37-CB9A83B5A184}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoSilverLight.Web", "ProyectoSilverLight.Web\ProyectoSilverLight.Web.csproj", "{4589EE41-ECBA-426D-A9CA-FE804EF4ACE2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45495D74-4749-4318-AF37-CB9A83B5A184}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45495D74-4749-4318-AF37-CB9A83B5A184}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45495D74-4749-4318-AF37-CB9A83B5A184}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45495D74-4749-4318-AF37-CB9A83B5A184}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4589EE41-ECBA-426D-A9CA-FE804EF4ACE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4589EE41-ECBA-426D-A9CA-FE804EF4ACE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4589EE41-ECBA-426D-A9CA-FE804EF4ACE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4589EE41-ECBA-426D-A9CA-FE804EF4ACE2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
