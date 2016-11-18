@@ -8,7 +8,7 @@ using System.Collections.ObjectModel;
 namespace ProyectoSilverLight.Web
 {
     [DataContract]
-    public class Caracteristica
+    public class clCaracteristica
     {
         [DataMember]
         public int CODIGOCARAC { get; set; }
@@ -21,7 +21,7 @@ namespace ProyectoSilverLight.Web
         [DataMember]
         public int CODIGOLINEAPRODUCTO { get; set; }
 
-        public Caracteristica(int codcarac, int codlinea, string nombre, int codsubcarac, int codLineaProd)
+        public clCaracteristica(int codcarac, int codlinea, string nombre, int codsubcarac, int codLineaProd)
         {
             this.CODIGOCARAC = codcarac;
             this.CODIGOLINEA = codlinea;

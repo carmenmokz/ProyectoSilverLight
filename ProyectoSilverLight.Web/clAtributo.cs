@@ -10,14 +10,14 @@ using System.Collections.ObjectModel;
 namespace ProyectoSilverLight.Web
 {
     [DataContract]
-    public class Atributo
+    public class clAtributo
     {
         [DataMember]
         public int CODIGOATRIBUTO { get; set; }
         [DataMember]
         public int CODIGOPRODUCTO { get; set; }
 
-        public Atributo(int codatributo, int codproducto)
+        public clAtributo(int codatributo, int codproducto)
         {
             this.CODIGOATRIBUTO = codatributo;
             this.CODIGOPRODUCTO = codproducto;

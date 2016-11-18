@@ -126,6 +126,10 @@
     <Compile Include="clCliente.cs" />
     <Compile Include="clConfiguracion.cs" />
     <Compile Include="clCuestionario.cs" />
+    <Compile Include="clDimension.cs" />
+    <Compile Include="clDireccion.cs" />
+    <Compile Include="clDistrito.cs" />
+    <Compile Include="clFactura.cs" />
     <Compile Include="CLIENTE.cs">
       <DependentUpon>ModelBD.tt</DependentUpon>
     </Compile>
