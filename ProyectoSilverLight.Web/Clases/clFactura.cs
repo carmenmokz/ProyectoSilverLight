@@ -25,23 +25,20 @@ namespace ProyectoSilverLight.Web
         [DataMember]
         public int CODCOMPRA { get; set; }
         [DataMember]
-        public int CODDIRECCION { get; set; }
-        [DataMember]
         public int CODIGOPRODUCTO { get; set; }
         [DataMember]
         public int CODIGODIRECCION { get; set; }
 
 
         public clFactura(int numfactura, int codmoneda, DateTime fecha, String idcliente, int estado, int codcompra,
-                        int coddireccion, int codproducto, int codigodireccion)
+                        int codproducto, int codigodireccion)
         {
             this.NUMFACTURA = numfactura;
             this.CODIGOMONEDA = codmoneda;
             this.FECHA = fecha;
             this.IDCLIENTE = idcliente;
             this.ESTADO = estado;
-            this.CODCOMPRA = codcompra;
-            this.CODDIRECCION = coddireccion;
+            this.CODCOMPRA = codcompra;     
             this.CODIGOPRODUCTO = codproducto;
             this.CODIGODIRECCION = codigodireccion;
 

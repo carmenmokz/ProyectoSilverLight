@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Web;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -13,7 +15,7 @@ namespace ProyectoSilverLight.Web
         [DataMember]
         public int IDCUESTIONARIO { get; set; }
         [DataMember]
-        public string DESCRIPCION { get; set; }
+        public String DESCRIPCION { get; set; }
         [DataMember]
         public int IDPREGUNTA { get; set; }
 

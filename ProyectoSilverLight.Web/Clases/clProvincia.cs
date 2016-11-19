@@ -10,20 +10,24 @@ using System.Collections.ObjectModel;
 namespace ProyectoSilverLight.Web
 {
     [DataContract]
-    public class Pais
+    public class clProvincia
     {
+        [DataMember]
+        public int CODIGOPROVINCIA { get; set; }
         [DataMember]
         public int CODIGOPAIS { get; set; }
         [DataMember]
         public String NOMBRE { get; set; }
         [DataMember]
-        public int CODIGOPROVINCIA { get; set; }
+        public int CODIGODISTRITO { get; set; }
 
-        public Pais(Decimal codpais, String nombre, Decimal codprovincia)
+
+        public clProvincia(int codigoprovincia, int codigopais, String nombre, int codigodistrito)
         {
-            this.CODIGOPAIS = codpais;
+            this.CODIGOPROVINCIA = codigoprovincia;
+            this.CODIGOPAIS = codigopais;
             this.NOMBRE = nombre;
-            this.CODIGOPROVINCIA = codprovincia;
+            this.CODIGODISTRITO = codigodistrito;
         }
     }
 }

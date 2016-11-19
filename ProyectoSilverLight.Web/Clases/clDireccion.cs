@@ -21,17 +21,14 @@ namespace ProyectoSilverLight.Web
         [DataMember]
         public String IDCLIENTE { get; set; }
         [DataMember]
-        public int CODDIRECCION { get; set; }
-        [DataMember]
         public int CODCOMPRA { get; set; }
 
-        public clDireccion(int codigodireccion, int codciudad, int numfactura, String idcliente, int coddireccion, int codcompra)
+        public clDireccion(int codigodireccion, int codciudad, int numfactura, String idcliente, int codcompra)
         {
             this.CODIGODIRECCION = codigodireccion;
             this.CODIGODIRECCION = codciudad;
             this.NUMFACTURA = numfactura;
             this.IDCLIENTE = idcliente;
-            this.CODDIRECCION = coddireccion;
             this.CODCOMPRA = codcompra;
 
         }

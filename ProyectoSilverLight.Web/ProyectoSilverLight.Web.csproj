@@ -118,22 +118,36 @@
     <Compile Include="CIUDAD.cs">
       <DependentUpon>ModelBD.tt</DependentUpon>
     </Compile>
-    <Compile Include="clAtributo.cs" />
-    <Compile Include="clAtributoPermitido.cs" />
-    <Compile Include="clCaracteristicas.cs" />
-    <Compile Include="clCaracteristicasProd.cs" />
-    <Compile Include="clCiudad.cs" />
-    <Compile Include="clCliente.cs" />
-    <Compile Include="clConfiguracion.cs" />
-    <Compile Include="clCuestionario.cs" />
-    <Compile Include="clDimension.cs" />
-    <Compile Include="clDireccion.cs" />
-    <Compile Include="clDistrito.cs" />
-    <Compile Include="clFactura.cs" />
+    <Compile Include="Clases\clAtributo.cs" />
+    <Compile Include="Clases\clAtributoPermitido.cs" />
+    <Compile Include="Clases\clCaracteristicas.cs" />
+    <Compile Include="Clases\clCaracteristicasProd.cs" />
+    <Compile Include="Clases\clCiudad.cs" />
+    <Compile Include="Clases\clCliente.cs" />
+    <Compile Include="Clases\clConfiguracion.cs" />
+    <Compile Include="Clases\clCuestionario.cs" />
+    <Compile Include="Clases\clDimension.cs" />
+    <Compile Include="Clases\clDireccion.cs" />
+    <Compile Include="Clases\clDistrito.cs" />
+    <Compile Include="Clases\clFactura.cs" />
+    <Compile Include="Clases\clLineaProducto.cs" />
+    <Compile Include="Clases\clListaPrecio.cs" />
+    <Compile Include="Clases\clMoneda.cs" />
+    <Compile Include="Clases\clNavegacion.cs" />
+    <Compile Include="Clases\clPregunta.cs" />
+    <Compile Include="Clases\clPreguntaPermitida.cs" />
+    <Compile Include="Clases\clProducto.cs" />
+    <Compile Include="Clases\clProveedor.cs" />
+    <Compile Include="Clases\clProvincia.cs" />
+    <Compile Include="Clases\clRespuestaCuestionario.cs" />
+    <Compile Include="Clases\clSubcaracteristicas.cs" />
+    <Compile Include="Clases\clTarjeta.cs" />
     <Compile Include="CLIENTE.cs">
       <DependentUpon>ModelBD.tt</DependentUpon>
     </Compile>
-    <Compile Include="clPais.cs" />
+    <Compile Include="Clases\clInvProducto.cs" />
+    <Compile Include="Clases\clLinea.cs" />
+    <Compile Include="Clases\clPais.cs" />
     <Compile Include="CONFUGURACION.cs">
       <DependentUpon>ModelBD.tt</DependentUpon>
     </Compile>
