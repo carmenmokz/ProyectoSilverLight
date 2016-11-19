@@ -1,0 +1,720 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="proyectoModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ATRIBUTO">
+    <Key>
+      <PropertyRef Name="CODIGOATRIBUTO" />
+    </Key>
+    <Property Name="CODIGOATRIBUTO" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="CODIGOPRODUCTO" Type="Decimal" Precision="2" Scale="0" />
+    <NavigationProperty Name="PRODUCTO" Relationship="Self.ATRIBUTO_PRODUCTO_FK1" FromRole="ATRIBUTO" ToRole="PRODUCTO" />
+    <NavigationProperty Name="ATRIBUTOPERMITIDO" Relationship="Self.ATRIBUTOPERMITIDO_FK1" FromRole="ATRIBUTO" ToRole="ATRIBUTOPERMITIDO" />
+  </EntityType>
+  <EntityType Name="ATRIBUTOPERMITIDO">
+    <Key>
+      <PropertyRef Name="CODIGOATRIBUTO" />
+      <PropertyRef Name="DESCRIPCION" />
+    </Key>
+    <Property Name="CODIGOATRIBUTO" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ATRIBUTO" Relationship="Self.ATRIBUTOPERMITIDO_FK1" FromRole="ATRIBUTOPERMITIDO" ToRole="ATRIBUTO" />
+  </EntityType>
+  <EntityType Name="CARACTERISTICA">
+    <Key>
+      <PropertyRef Name="CODIGOCARAC" />
+    </Key>
+    <Property Name="CODIGOCARAC" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="CODIGOLINEA" Type="Decimal" Precision="2" Scale="0" />
+    <Property Name="NOMBRE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CODIGOSUBCARAC" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="CODIGOLINEAPRODUCTO" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <NavigationProperty Name="LINEAPRODUCTO" Relationship="Self.CARACTERISTICA_FK2" FromRole="CARACTERISTICA" ToRole="LINEAPRODUCTO" />
+    <NavigationProperty Name="SUBCARACTERISTICAS" Relationship="Self.SUBCARACTERISTICAS_FK2" FromRole="CARACTERISTICA" ToRole="SUBCARACTERISTICAS" />
+  </EntityType>
+  <EntityType Name="CARACTERISTICAPRODUCTO">
+    <Key>
+      <PropertyRef Name="CODIGOCARACTPROD" />
+    </Key>
+    <Property Name="CODIGOCARACTPROD" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="CODIGOCARA" Type="Decimal" Precision="2" Scale="0" />
+    <Property Name="CODIGOPRODUCTO" Type="Decimal" Precision="2" Scale="0" />
+    <Property Name="CODIGOSUBCARAC" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <NavigationProperty Name="SUBCARACTERISTICAS" Relationship="Self.CARACTERISTICAPRODUCTO_FK1" FromRole="CARACTERISTICAPRODUCTO" ToRole="SUBCARACTERISTICAS" />
+    <NavigationProperty Name="PRODUCTO" Relationship="Self.CARACTERISTICAPRODUCTO_FK2" FromRole="CARACTERISTICAPRODUCTO" ToRole="PRODUCTO" />
+  </EntityType>
+  <EntityType Name="CIUDAD">
+    <Key>
+      <PropertyRef Name="CODIGOCIUDAD" />
+    </Key>
+    <Property Name="CODIGOCIUDAD" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="CODIGODISTRITO" Type="Decimal" Precision="2" Scale="0" />
+    <Property Name="NOMBRE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OTRASSEÑAS" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CODIGODIRECCION" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <NavigationProperty Name="DISTRITO" Relationship="Self.CIUDAD_DISTRITO_FK1" FromRole="CIUDAD" ToRole="DISTRITO" />
+  </EntityType>
+  <EntityType Name="CLIENTE">
+    <Key>
+      <PropertyRef Name="IDCLIENTE" />
+    </Key>
+    <Property Name="IDCLIENTE" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="APELLIDO1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="APELLIDO2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CORREO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="IDCLIENTE1" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NUMFACTURA" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="CODDIRECCION" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="CODCOMPRA" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <NavigationProperty Name="LISTAPRECIO" Relationship="Self.LISTAPRECIO_CLIENTE_FK1" FromRole="CLIENTE" ToRole="LISTAPRECIO" />
+    <NavigationProperty Name="NAVEGACION" Relationship="Self.NAVEGACION_CLIENTE_FK1" FromRole="CLIENTE" ToRole="NAVEGACION" />
+    <NavigationProperty Name="TARJETA" Relationship="Self.TARJETA_CLIENTE_FK1" FromRole="CLIENTE" ToRole="TARJETA" />
+  </EntityType>
+  <EntityType Name="CUESTIONARIO">
+    <Key>
+      <PropertyRef Name="IDCUESTIONARIO" />
+    </Key>
+    <Property Name="IDCUESTIONARIO" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDCUESTIOARIO" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="IDPREGUNTA" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <NavigationProperty Name="PREGUNTA" Relationship="Self.PREGUNTA_CUESTIONARIO_FK1" FromRole="CUESTIONARIO" ToRole="PREGUNTA" />
+  </EntityType>
+  <EntityType Name="DIMENSION">
+    <Key>
+      <PropertyRef Name="CODIGODIMENSION" />
+    </Key>
+    <Property Name="CODIGODIMENSION" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="ANCHO" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="LARGO" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="VOLUMEN" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="PROFUNDIDAD" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="CODIGOPRODUCTO" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <NavigationProperty Name="PRODUCTO" Relationship="Self.DIMENSION_PRODUCTO_FK1" FromRole="DIMENSION" ToRole="PRODUCTO" />
+  </EntityType>
+  <EntityType Name="DIRECCION">
+    <Key>
+      <PropertyRef Name="CODIGODIRECCION" />
+    </Key>
+    <Property Name="CODIGODIRECCION" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="CODIGOCIUDAD" Type="Decimal" Precision="2" Scale="0" />
+    <Property Name="NUMFACTURA" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="IDCLIENTE" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CODDIRECCION" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="CODCOMPRA" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DISTRITO">
+    <Key>
+      <PropertyRef Name="CODIGODISTRITO" />
+    </Key>
+    <Property Name="CODIGODISTRITO" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="CODIGOPROVINCIA" Type="Decimal" Precision="2" Scale="0" />
+    <Property Name="NOMBRE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CODIGOCIUDAD" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <NavigationProperty Name="CIUDAD" Relationship="Self.CIUDAD_DISTRITO_FK1" FromRole="DISTRITO" ToRole="CIUDAD" />
+    <NavigationProperty Name="PROVINCIA" Relationship="Self.DISTRITO_PROVINCIA_FK1" FromRole="DISTRITO" ToRole="PROVINCIA" />
+  </EntityType>
+  <EntityType Name="FACTURA">
+    <Key>
+      <PropertyRef Name="NUMFACTURA" />
+      <PropertyRef Name="IDCLIENTE" />
+      <PropertyRef Name="CODCOMPRA" />
+      <PropertyRef Name="CODDIRECCION" />
+    </Key>
+    <Property Name="NUMFACTURA" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="CODIGOMONEDA" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="FECHA" Type="DateTime" Precision="0" />
+    <Property Name="IDCLIENTE" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ESTADO" Type="Decimal" Precision="9" Scale="0" />
+    <Property Name="CODCOMPRA" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="CODDIRECCION" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="CODIGOPRODUCTO" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="CODIGODIRECCION" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <NavigationProperty Name="LINEA" Relationship="Self.LINEA_FACTURA_FK1" FromRole="FACTURA" ToRole="LINEA" />
+  </EntityType>
+  <EntityType Name="INVPRODUCTO">
+    <Key>
+      <PropertyRef Name="IDPRODUCTO" />
+      <PropertyRef Name="IDPROVEEDOR" />
+      <PropertyRef Name="SERIE" />
+    </Key>
+    <Property Name="IDPRODUCTO" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="IDPROVEEDOR" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="SERIE" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FACTURA" Type="Decimal" Precision="9" Scale="0" />
+    <Property Name="CODIGOPROVEEDOR" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LINEA">
+    <Key>
+      <PropertyRef Name="CODIGOPRODUCTO" />
+      <PropertyRef Name="NUMFACTURA" />
+    </Key>
+    <Property Name="CODIGOPRODUCTO" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CANTIDAD" Type="Decimal" Precision="9" Scale="0" />
+    <Property Name="CODIGOLINEA" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="PRECIOXUNIDAD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NUMFACTURA" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="FCHPROG" Type="DateTime" Precision="0" />
+    <Property Name="FCHREAL" Type="DateTime" Precision="0" />
+    <Property Name="ESTADO" Type="Decimal" Precision="9" Scale="0" />
+    <Property Name="IDCLIENTE" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CODDIRECCION" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="CODCOMPRA" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="CODIGORESPUESTAPERMITIDA" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <NavigationProperty Name="FACTURA" Relationship="Self.LINEA_FACTURA_FK1" FromRole="LINEA" ToRole="FACTURA" />
+    <NavigationProperty Name="RESPUESTACUESTIONARIO" Relationship="Self.LINEA_FK1" FromRole="LINEA" ToRole="RESPUESTACUESTIONARIO" />
+    <NavigationProperty Name="PRODUCTO" Relationship="Self.LINEA_PRODUCTO_FK1" FromRole="LINEA" ToRole="PRODUCTO" />
+  </EntityType>
+  <EntityType Name="LINEAPRODUCTO">
+    <Key>
+      <PropertyRef Name="CODIGOLINEAPRODUCTO" />
+    </Key>
+    <Property Name="CODIGOLINEAPRODUCTO" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CODIGOCARAC" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <NavigationProperty Name="CARACTERISTICA" Relationship="Self.CARACTERISTICA_FK2" FromRole="LINEAPRODUCTO" ToRole="CARACTERISTICA" />
+  </EntityType>
+  <EntityType Name="LISTAPRECIO">
+    <Key>
+      <PropertyRef Name="CODIGOLISTAPRECIO" />
+    </Key>
+    <Property Name="CODIGOLISTAPRECIO" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="IDCLIENTE" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="IDPRODUCTO" Type="Decimal" Precision="9" Scale="0" />
+    <Property Name="PRECIO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CODIGOPRODUCTO" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="IDCLIENTE1" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="CLIENTE" Relationship="Self.LISTAPRECIO_CLIENTE_FK1" FromRole="LISTAPRECIO" ToRole="CLIENTE" />
+    <NavigationProperty Name="PRODUCTO" Relationship="Self.LISTAPRECIO_PRODUCTO_FK1" FromRole="LISTAPRECIO" ToRole="PRODUCTO" />
+  </EntityType>
+  <EntityType Name="MONEDA">
+    <Key>
+      <PropertyRef Name="CODIGOMONEDA" />
+    </Key>
+    <Property Name="CODIGOMONEDA" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="TIPO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PAIS">
+    <Key>
+      <PropertyRef Name="CODIGOPAIS" />
+    </Key>
+    <Property Name="CODIGOPAIS" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CODIGOPROVINCIA" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <NavigationProperty Name="PROVINCIA" Relationship="Self.PROVINCIA_PAIS_FK1" FromRole="PAIS" ToRole="PROVINCIA" />
+  </EntityType>
+  <EntityType Name="PREGUNTA">
+    <Key>
+      <PropertyRef Name="IDCUESTIOARIO" />
+      <PropertyRef Name="IDPREGUNTA" />
+    </Key>
+    <Property Name="IDCUESTIOARIO" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="IDPREGUNTA" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="PREGUNTA1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDCUESTIONARIO" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <NavigationProperty Name="CUESTIONARIO" Relationship="Self.PREGUNTA_CUESTIONARIO_FK1" FromRole="PREGUNTA" ToRole="CUESTIONARIO" />
+    <NavigationProperty Name="PREGUNTAPERMITIDA" Relationship="Self.PREGUNTAPERMITIDA_FK2" FromRole="PREGUNTA" ToRole="PREGUNTAPERMITIDA" />
+  </EntityType>
+  <EntityType Name="PREGUNTAPERMITIDA">
+    <Key>
+      <PropertyRef Name="IDCUESTIONARIO" />
+      <PropertyRef Name="IDPREGUNTA" />
+      <PropertyRef Name="PREGUNTA" />
+    </Key>
+    <Property Name="IDCUESTIONARIO" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="IDPREGUNTA" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="PREGUNTA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDRESPUESTACUESTIONARIO" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="CODIGOLINEA" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="CODIGORESPUESTAPERMITIDA" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="IDCUESTIOARIO" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <NavigationProperty Name="PREGUNTA1" Relationship="Self.PREGUNTAPERMITIDA_FK2" FromRole="PREGUNTAPERMITIDA" ToRole="PREGUNTA" />
+    <NavigationProperty Name="RESPUESTACUESTIONARIO" Relationship="Self.PREGUNTAPERMITIDA_FK1" FromRole="PREGUNTAPERMITIDA" ToRole="RESPUESTACUESTIONARIO" />
+  </EntityType>
+  <EntityType Name="PRODUCTO">
+    <Key>
+      <PropertyRef Name="CODIGOPRODUCTO" />
+    </Key>
+    <Property Name="CODIGOPRODUCTO" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="CODIGODIMENSION" Type="Decimal" Precision="2" Scale="0" />
+    <Property Name="IDVERSION" Type="Decimal" Precision="9" Scale="0" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IMAGENHD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IMAGEN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PESO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NUMFACTURA" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="CODIGOCARACTPROD" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="CODIGOLISTAPRECIO" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <NavigationProperty Name="ATRIBUTO" Relationship="Self.ATRIBUTO_PRODUCTO_FK1" FromRole="PRODUCTO" ToRole="ATRIBUTO" />
+    <NavigationProperty Name="CARACTERISTICAPRODUCTO" Relationship="Self.CARACTERISTICAPRODUCTO_FK2" FromRole="PRODUCTO" ToRole="CARACTERISTICAPRODUCTO" />
+    <NavigationProperty Name="DIMENSION" Relationship="Self.DIMENSION_PRODUCTO_FK1" FromRole="PRODUCTO" ToRole="DIMENSION" />
+    <NavigationProperty Name="LINEA" Relationship="Self.LINEA_PRODUCTO_FK1" FromRole="PRODUCTO" ToRole="LINEA" />
+    <NavigationProperty Name="LISTAPRECIO" Relationship="Self.LISTAPRECIO_PRODUCTO_FK1" FromRole="PRODUCTO" ToRole="LISTAPRECIO" />
+  </EntityType>
+  <EntityType Name="PROVEEDOR">
+    <Key>
+      <PropertyRef Name="CODIGOPROVEEDOR" />
+    </Key>
+    <Property Name="CODIGOPROVEEDOR" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PROVINCIA">
+    <Key>
+      <PropertyRef Name="CODIGOPROVINCIA" />
+    </Key>
+    <Property Name="CODIGOPROVINCIA" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="CODIGOPAIS" Type="Decimal" Precision="2" Scale="0" />
+    <Property Name="NOMBRE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CODIGODISTRITO" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <NavigationProperty Name="DISTRITO" Relationship="Self.DISTRITO_PROVINCIA_FK1" FromRole="PROVINCIA" ToRole="DISTRITO" />
+    <NavigationProperty Name="PAIS" Relationship="Self.PROVINCIA_PAIS_FK1" FromRole="PROVINCIA" ToRole="PAIS" />
+  </EntityType>
+  <EntityType Name="RESPUESTACUESTIONARIO">
+    <Key>
+      <PropertyRef Name="CODIGOLINEA" />
+      <PropertyRef Name="CODIGORESPUESTAPERMITIDA" />
+    </Key>
+    <Property Name="CODIGOLINEA" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="CODIGORESPUESTAPERMITIDA" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="RESPUESTA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDCUESTIONARIO" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="IDPREGUNTA" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="PREGUNTA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CODIGOPRODUCTO" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="NUMFACTURA" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
+    <NavigationProperty Name="LINEA" Relationship="Self.LINEA_FK1" FromRole="RESPUESTACUESTIONARIO" ToRole="LINEA" />
+    <NavigationProperty Name="PREGUNTAPERMITIDA" Relationship="Self.PREGUNTAPERMITIDA_FK1" FromRole="RESPUESTACUESTIONARIO" ToRole="PREGUNTAPERMITIDA" />
+  </EntityType>
+  <EntityType Name="SUBCARACTERISTICAS">
+    <Key>
+      <PropertyRef Name="CODIGOSUBCARAC" />
+    </Key>
+    <Property Name="CODIGOSUBCARAC" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="CODIGOCARAC" Type="Decimal" Precision="2" Scale="0" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CODIGOCARACTPROD" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <NavigationProperty Name="CARACTERISTICA" Relationship="Self.SUBCARACTERISTICAS_FK2" FromRole="SUBCARACTERISTICAS" ToRole="CARACTERISTICA" />
+    <NavigationProperty Name="CARACTERISTICAPRODUCTO" Relationship="Self.CARACTERISTICAPRODUCTO_FK1" FromRole="SUBCARACTERISTICAS" ToRole="CARACTERISTICAPRODUCTO" />
+    <NavigationProperty Name="NAVEGACION" Relationship="Self.NAVEGACION_FK1" FromRole="SUBCARACTERISTICAS" ToRole="NAVEGACION" />
+  </EntityType>
+  <EntityType Name="TARJETA">
+    <Key>
+      <PropertyRef Name="NUMEROTARJETA" />
+    </Key>
+    <Property Name="NUMEROTARJETA" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="IDCLIENTE" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="FCHVENCIMIENTO" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="CLIENTE" Relationship="Self.TARJETA_CLIENTE_FK1" FromRole="TARJETA" ToRole="CLIENTE" />
+  </EntityType>
+  <EntityType Name="CONFUGURACION">
+    <Key>
+      <PropertyRef Name="CODIGOVALORESPERMITIDOS" />
+      <PropertyRef Name="CODIGOLINEA" />
+      <PropertyRef Name="CONFIGURACION" />
+      <PropertyRef Name="CODIGOATRIBUTO" />
+      <PropertyRef Name="DESCRIPCION" />
+      <PropertyRef Name="CODIGOPRODUCTO" />
+      <PropertyRef Name="NUMFACTURA" />
+    </Key>
+    <Property Name="CODIGOVALORESPERMITIDOS" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="CODIGOLINEA" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="CONFIGURACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CODIGOATRIBUTO" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CODIGOPRODUCTO" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="NUMFACTURA" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NAVEGACION">
+    <Key>
+      <PropertyRef Name="CODIGOCLIENTE" />
+      <PropertyRef Name="CODIGOSUBCARACTERISTICA" />
+      <PropertyRef Name="SITIOVISITADO" />
+      <PropertyRef Name="IDCLIENTE" />
+      <PropertyRef Name="CODIGOSUBCARAC" />
+    </Key>
+    <Property Name="CODIGOCLIENTE" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="CODIGOSUBCARACTERISTICA" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="SITIOVISITADO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDCLIENTE" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CODIGOSUBCARAC" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <NavigationProperty Name="CLIENTE" Relationship="Self.NAVEGACION_CLIENTE_FK1" FromRole="NAVEGACION" ToRole="CLIENTE" />
+    <NavigationProperty Name="SUBCARACTERISTICAS" Relationship="Self.NAVEGACION_FK1" FromRole="NAVEGACION" ToRole="SUBCARACTERISTICAS" />
+  </EntityType>
+  <Association Name="ATRIBUTO_PRODUCTO_FK1">
+    <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="0..1" />
+    <End Role="ATRIBUTO" Type="Self.ATRIBUTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTO">
+        <PropertyRef Name="CODIGOPRODUCTO" />
+      </Principal>
+      <Dependent Role="ATRIBUTO">
+        <PropertyRef Name="CODIGOPRODUCTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ATRIBUTOPERMITIDO_FK1">
+    <End Role="ATRIBUTO" Type="Self.ATRIBUTO" Multiplicity="1" />
+    <End Role="ATRIBUTOPERMITIDO" Type="Self.ATRIBUTOPERMITIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ATRIBUTO">
+        <PropertyRef Name="CODIGOATRIBUTO" />
+      </Principal>
+      <Dependent Role="ATRIBUTOPERMITIDO">
+        <PropertyRef Name="CODIGOATRIBUTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CARACTERISTICA_FK2">
+    <End Role="LINEAPRODUCTO" Type="Self.LINEAPRODUCTO" Multiplicity="1" />
+    <End Role="CARACTERISTICA" Type="Self.CARACTERISTICA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LINEAPRODUCTO">
+        <PropertyRef Name="CODIGOLINEAPRODUCTO" />
+      </Principal>
+      <Dependent Role="CARACTERISTICA">
+        <PropertyRef Name="CODIGOLINEAPRODUCTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SUBCARACTERISTICAS_FK2">
+    <End Role="CARACTERISTICA" Type="Self.CARACTERISTICA" Multiplicity="0..1" />
+    <End Role="SUBCARACTERISTICAS" Type="Self.SUBCARACTERISTICAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CARACTERISTICA">
+        <PropertyRef Name="CODIGOCARAC" />
+      </Principal>
+      <Dependent Role="SUBCARACTERISTICAS">
+        <PropertyRef Name="CODIGOCARAC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CARACTERISTICAPRODUCTO_FK1">
+    <End Role="SUBCARACTERISTICAS" Type="Self.SUBCARACTERISTICAS" Multiplicity="1" />
+    <End Role="CARACTERISTICAPRODUCTO" Type="Self.CARACTERISTICAPRODUCTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUBCARACTERISTICAS">
+        <PropertyRef Name="CODIGOSUBCARAC" />
+      </Principal>
+      <Dependent Role="CARACTERISTICAPRODUCTO">
+        <PropertyRef Name="CODIGOSUBCARAC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CARACTERISTICAPRODUCTO_FK2">
+    <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="0..1" />
+    <End Role="CARACTERISTICAPRODUCTO" Type="Self.CARACTERISTICAPRODUCTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTO">
+        <PropertyRef Name="CODIGOPRODUCTO" />
+      </Principal>
+      <Dependent Role="CARACTERISTICAPRODUCTO">
+        <PropertyRef Name="CODIGOPRODUCTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CIUDAD_DISTRITO_FK1">
+    <End Role="DISTRITO" Type="Self.DISTRITO" Multiplicity="0..1" />
+    <End Role="CIUDAD" Type="Self.CIUDAD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DISTRITO">
+        <PropertyRef Name="CODIGODISTRITO" />
+      </Principal>
+      <Dependent Role="CIUDAD">
+        <PropertyRef Name="CODIGODISTRITO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LISTAPRECIO_CLIENTE_FK1">
+    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="1" />
+    <End Role="LISTAPRECIO" Type="Self.LISTAPRECIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTE">
+        <PropertyRef Name="IDCLIENTE" />
+      </Principal>
+      <Dependent Role="LISTAPRECIO">
+        <PropertyRef Name="IDCLIENTE1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="NAVEGACION_CLIENTE_FK1">
+    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="1" />
+    <End Role="NAVEGACION" Type="Self.NAVEGACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTE">
+        <PropertyRef Name="IDCLIENTE" />
+      </Principal>
+      <Dependent Role="NAVEGACION">
+        <PropertyRef Name="IDCLIENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TARJETA_CLIENTE_FK1">
+    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="0..1" />
+    <End Role="TARJETA" Type="Self.TARJETA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTE">
+        <PropertyRef Name="IDCLIENTE" />
+      </Principal>
+      <Dependent Role="TARJETA">
+        <PropertyRef Name="IDCLIENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PREGUNTA_CUESTIONARIO_FK1">
+    <End Role="CUESTIONARIO" Type="Self.CUESTIONARIO" Multiplicity="1" />
+    <End Role="PREGUNTA" Type="Self.PREGUNTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUESTIONARIO">
+        <PropertyRef Name="IDCUESTIONARIO" />
+      </Principal>
+      <Dependent Role="PREGUNTA">
+        <PropertyRef Name="IDCUESTIONARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DIMENSION_PRODUCTO_FK1">
+    <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="1" />
+    <End Role="DIMENSION" Type="Self.DIMENSION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTO">
+        <PropertyRef Name="CODIGOPRODUCTO" />
+      </Principal>
+      <Dependent Role="DIMENSION">
+        <PropertyRef Name="CODIGOPRODUCTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DISTRITO_PROVINCIA_FK1">
+    <End Role="PROVINCIA" Type="Self.PROVINCIA" Multiplicity="0..1" />
+    <End Role="DISTRITO" Type="Self.DISTRITO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROVINCIA">
+        <PropertyRef Name="CODIGOPROVINCIA" />
+      </Principal>
+      <Dependent Role="DISTRITO">
+        <PropertyRef Name="CODIGOPROVINCIA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LINEA_FACTURA_FK1">
+    <End Role="FACTURA" Type="Self.FACTURA" Multiplicity="1" />
+    <End Role="LINEA" Type="Self.LINEA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FACTURA">
+        <PropertyRef Name="NUMFACTURA" />
+        <PropertyRef Name="IDCLIENTE" />
+        <PropertyRef Name="CODDIRECCION" />
+        <PropertyRef Name="CODCOMPRA" />
+      </Principal>
+      <Dependent Role="LINEA">
+        <PropertyRef Name="NUMFACTURA" />
+        <PropertyRef Name="IDCLIENTE" />
+        <PropertyRef Name="CODDIRECCION" />
+        <PropertyRef Name="CODCOMPRA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LINEA_FK1">
+    <End Role="RESPUESTACUESTIONARIO" Type="Self.RESPUESTACUESTIONARIO" Multiplicity="1" />
+    <End Role="LINEA" Type="Self.LINEA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RESPUESTACUESTIONARIO">
+        <PropertyRef Name="CODIGOLINEA" />
+        <PropertyRef Name="CODIGORESPUESTAPERMITIDA" />
+      </Principal>
+      <Dependent Role="LINEA">
+        <PropertyRef Name="CODIGOLINEA" />
+        <PropertyRef Name="CODIGORESPUESTAPERMITIDA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LINEA_PRODUCTO_FK1">
+    <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="1" />
+    <End Role="LINEA" Type="Self.LINEA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTO">
+        <PropertyRef Name="CODIGOPRODUCTO" />
+      </Principal>
+      <Dependent Role="LINEA">
+        <PropertyRef Name="CODIGOPRODUCTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LISTAPRECIO_PRODUCTO_FK1">
+    <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="1" />
+    <End Role="LISTAPRECIO" Type="Self.LISTAPRECIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTO">
+        <PropertyRef Name="CODIGOPRODUCTO" />
+      </Principal>
+      <Dependent Role="LISTAPRECIO">
+        <PropertyRef Name="CODIGOPRODUCTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PROVINCIA_PAIS_FK1">
+    <End Role="PAIS" Type="Self.PAIS" Multiplicity="0..1" />
+    <End Role="PROVINCIA" Type="Self.PROVINCIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PAIS">
+        <PropertyRef Name="CODIGOPAIS" />
+      </Principal>
+      <Dependent Role="PROVINCIA">
+        <PropertyRef Name="CODIGOPAIS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PREGUNTAPERMITIDA_FK2">
+    <End Role="PREGUNTA" Type="Self.PREGUNTA" Multiplicity="1" />
+    <End Role="PREGUNTAPERMITIDA" Type="Self.PREGUNTAPERMITIDA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PREGUNTA">
+        <PropertyRef Name="IDCUESTIOARIO" />
+        <PropertyRef Name="IDPREGUNTA" />
+      </Principal>
+      <Dependent Role="PREGUNTAPERMITIDA">
+        <PropertyRef Name="IDCUESTIOARIO" />
+        <PropertyRef Name="IDPREGUNTA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PREGUNTAPERMITIDA_FK1">
+    <End Role="RESPUESTACUESTIONARIO" Type="Self.RESPUESTACUESTIONARIO" Multiplicity="1" />
+    <End Role="PREGUNTAPERMITIDA" Type="Self.PREGUNTAPERMITIDA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RESPUESTACUESTIONARIO">
+        <PropertyRef Name="CODIGOLINEA" />
+        <PropertyRef Name="CODIGORESPUESTAPERMITIDA" />
+      </Principal>
+      <Dependent Role="PREGUNTAPERMITIDA">
+        <PropertyRef Name="CODIGOLINEA" />
+        <PropertyRef Name="CODIGORESPUESTAPERMITIDA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="NAVEGACION_FK1">
+    <End Role="SUBCARACTERISTICAS" Type="Self.SUBCARACTERISTICAS" Multiplicity="1" />
+    <End Role="NAVEGACION" Type="Self.NAVEGACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUBCARACTERISTICAS">
+        <PropertyRef Name="CODIGOSUBCARAC" />
+      </Principal>
+      <Dependent Role="NAVEGACION">
+        <PropertyRef Name="CODIGOSUBCARAC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="proyectoEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ATRIBUTO" EntityType="Self.ATRIBUTO" />
+    <EntitySet Name="ATRIBUTOPERMITIDO" EntityType="Self.ATRIBUTOPERMITIDO" />
+    <EntitySet Name="CARACTERISTICA" EntityType="Self.CARACTERISTICA" />
+    <EntitySet Name="CARACTERISTICAPRODUCTO" EntityType="Self.CARACTERISTICAPRODUCTO" />
+    <EntitySet Name="CIUDAD" EntityType="Self.CIUDAD" />
+    <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" />
+    <EntitySet Name="CUESTIONARIO" EntityType="Self.CUESTIONARIO" />
+    <EntitySet Name="DIMENSION" EntityType="Self.DIMENSION" />
+    <EntitySet Name="DIRECCION" EntityType="Self.DIRECCION" />
+    <EntitySet Name="DISTRITO" EntityType="Self.DISTRITO" />
+    <EntitySet Name="FACTURA" EntityType="Self.FACTURA" />
+    <EntitySet Name="INVPRODUCTO" EntityType="Self.INVPRODUCTO" />
+    <EntitySet Name="LINEA" EntityType="Self.LINEA" />
+    <EntitySet Name="LINEAPRODUCTO" EntityType="Self.LINEAPRODUCTO" />
+    <EntitySet Name="LISTAPRECIO" EntityType="Self.LISTAPRECIO" />
+    <EntitySet Name="MONEDA" EntityType="Self.MONEDA" />
+    <EntitySet Name="PAIS" EntityType="Self.PAIS" />
+    <EntitySet Name="PREGUNTA" EntityType="Self.PREGUNTA" />
+    <EntitySet Name="PREGUNTAPERMITIDA" EntityType="Self.PREGUNTAPERMITIDA" />
+    <EntitySet Name="PRODUCTO" EntityType="Self.PRODUCTO" />
+    <EntitySet Name="PROVEEDOR" EntityType="Self.PROVEEDOR" />
+    <EntitySet Name="PROVINCIA" EntityType="Self.PROVINCIA" />
+    <EntitySet Name="RESPUESTACUESTIONARIO" EntityType="Self.RESPUESTACUESTIONARIO" />
+    <EntitySet Name="SUBCARACTERISTICAS" EntityType="Self.SUBCARACTERISTICAS" />
+    <EntitySet Name="TARJETA" EntityType="Self.TARJETA" />
+    <EntitySet Name="CONFUGURACION" EntityType="Self.CONFUGURACION" />
+    <EntitySet Name="NAVEGACION" EntityType="Self.NAVEGACION" />
+    <AssociationSet Name="ATRIBUTO_PRODUCTO_FK1" Association="Self.ATRIBUTO_PRODUCTO_FK1">
+      <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+      <End Role="ATRIBUTO" EntitySet="ATRIBUTO" />
+    </AssociationSet>
+    <AssociationSet Name="ATRIBUTOPERMITIDO_FK1" Association="Self.ATRIBUTOPERMITIDO_FK1">
+      <End Role="ATRIBUTO" EntitySet="ATRIBUTO" />
+      <End Role="ATRIBUTOPERMITIDO" EntitySet="ATRIBUTOPERMITIDO" />
+    </AssociationSet>
+    <AssociationSet Name="CARACTERISTICA_FK2" Association="Self.CARACTERISTICA_FK2">
+      <End Role="LINEAPRODUCTO" EntitySet="LINEAPRODUCTO" />
+      <End Role="CARACTERISTICA" EntitySet="CARACTERISTICA" />
+    </AssociationSet>
+    <AssociationSet Name="SUBCARACTERISTICAS_FK2" Association="Self.SUBCARACTERISTICAS_FK2">
+      <End Role="CARACTERISTICA" EntitySet="CARACTERISTICA" />
+      <End Role="SUBCARACTERISTICAS" EntitySet="SUBCARACTERISTICAS" />
+    </AssociationSet>
+    <AssociationSet Name="CARACTERISTICAPRODUCTO_FK1" Association="Self.CARACTERISTICAPRODUCTO_FK1">
+      <End Role="SUBCARACTERISTICAS" EntitySet="SUBCARACTERISTICAS" />
+      <End Role="CARACTERISTICAPRODUCTO" EntitySet="CARACTERISTICAPRODUCTO" />
+    </AssociationSet>
+    <AssociationSet Name="CARACTERISTICAPRODUCTO_FK2" Association="Self.CARACTERISTICAPRODUCTO_FK2">
+      <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+      <End Role="CARACTERISTICAPRODUCTO" EntitySet="CARACTERISTICAPRODUCTO" />
+    </AssociationSet>
+    <AssociationSet Name="CIUDAD_DISTRITO_FK1" Association="Self.CIUDAD_DISTRITO_FK1">
+      <End Role="DISTRITO" EntitySet="DISTRITO" />
+      <End Role="CIUDAD" EntitySet="CIUDAD" />
+    </AssociationSet>
+    <AssociationSet Name="LISTAPRECIO_CLIENTE_FK1" Association="Self.LISTAPRECIO_CLIENTE_FK1">
+      <End Role="CLIENTE" EntitySet="CLIENTE" />
+      <End Role="LISTAPRECIO" EntitySet="LISTAPRECIO" />
+    </AssociationSet>
+    <AssociationSet Name="NAVEGACION_CLIENTE_FK1" Association="Self.NAVEGACION_CLIENTE_FK1">
+      <End Role="CLIENTE" EntitySet="CLIENTE" />
+      <End Role="NAVEGACION" EntitySet="NAVEGACION" />
+    </AssociationSet>
+    <AssociationSet Name="TARJETA_CLIENTE_FK1" Association="Self.TARJETA_CLIENTE_FK1">
+      <End Role="CLIENTE" EntitySet="CLIENTE" />
+      <End Role="TARJETA" EntitySet="TARJETA" />
+    </AssociationSet>
+    <AssociationSet Name="PREGUNTA_CUESTIONARIO_FK1" Association="Self.PREGUNTA_CUESTIONARIO_FK1">
+      <End Role="CUESTIONARIO" EntitySet="CUESTIONARIO" />
+      <End Role="PREGUNTA" EntitySet="PREGUNTA" />
+    </AssociationSet>
+    <AssociationSet Name="DIMENSION_PRODUCTO_FK1" Association="Self.DIMENSION_PRODUCTO_FK1">
+      <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+      <End Role="DIMENSION" EntitySet="DIMENSION" />
+    </AssociationSet>
+    <AssociationSet Name="DISTRITO_PROVINCIA_FK1" Association="Self.DISTRITO_PROVINCIA_FK1">
+      <End Role="PROVINCIA" EntitySet="PROVINCIA" />
+      <End Role="DISTRITO" EntitySet="DISTRITO" />
+    </AssociationSet>
+    <AssociationSet Name="LINEA_FACTURA_FK1" Association="Self.LINEA_FACTURA_FK1">
+      <End Role="FACTURA" EntitySet="FACTURA" />
+      <End Role="LINEA" EntitySet="LINEA" />
+    </AssociationSet>
+    <AssociationSet Name="LINEA_FK1" Association="Self.LINEA_FK1">
+      <End Role="RESPUESTACUESTIONARIO" EntitySet="RESPUESTACUESTIONARIO" />
+      <End Role="LINEA" EntitySet="LINEA" />
+    </AssociationSet>
+    <AssociationSet Name="LINEA_PRODUCTO_FK1" Association="Self.LINEA_PRODUCTO_FK1">
+      <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+      <End Role="LINEA" EntitySet="LINEA" />
+    </AssociationSet>
+    <AssociationSet Name="LISTAPRECIO_PRODUCTO_FK1" Association="Self.LISTAPRECIO_PRODUCTO_FK1">
+      <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+      <End Role="LISTAPRECIO" EntitySet="LISTAPRECIO" />
+    </AssociationSet>
+    <AssociationSet Name="PROVINCIA_PAIS_FK1" Association="Self.PROVINCIA_PAIS_FK1">
+      <End Role="PAIS" EntitySet="PAIS" />
+      <End Role="PROVINCIA" EntitySet="PROVINCIA" />
+    </AssociationSet>
+    <AssociationSet Name="PREGUNTAPERMITIDA_FK2" Association="Self.PREGUNTAPERMITIDA_FK2">
+      <End Role="PREGUNTA" EntitySet="PREGUNTA" />
+      <End Role="PREGUNTAPERMITIDA" EntitySet="PREGUNTAPERMITIDA" />
+    </AssociationSet>
+    <AssociationSet Name="PREGUNTAPERMITIDA_FK1" Association="Self.PREGUNTAPERMITIDA_FK1">
+      <End Role="RESPUESTACUESTIONARIO" EntitySet="RESPUESTACUESTIONARIO" />
+      <End Role="PREGUNTAPERMITIDA" EntitySet="PREGUNTAPERMITIDA" />
+    </AssociationSet>
+    <AssociationSet Name="NAVEGACION_FK1" Association="Self.NAVEGACION_FK1">
+      <End Role="SUBCARACTERISTICAS" EntitySet="SUBCARACTERISTICAS" />
+      <End Role="NAVEGACION" EntitySet="NAVEGACION" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="proyectoModel1StoreContainer" CdmEntityContainer="proyectoEntities1">
+    <EntitySetMapping Name="ATRIBUTO">
+      <EntityTypeMapping TypeName="proyectoModel1.ATRIBUTO">
+        <MappingFragment StoreEntitySet="ATRIBUTO">
+          <ScalarProperty Name="CODIGOATRIBUTO" ColumnName="CODIGOATRIBUTO" />
+          <ScalarProperty Name="CODIGOPRODUCTO" ColumnName="CODIGOPRODUCTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ATRIBUTOPERMITIDO">
+      <EntityTypeMapping TypeName="proyectoModel1.ATRIBUTOPERMITIDO">
+        <MappingFragment StoreEntitySet="ATRIBUTOPERMITIDO">
+          <ScalarProperty Name="CODIGOATRIBUTO" ColumnName="CODIGOATRIBUTO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CARACTERISTICA">
+      <EntityTypeMapping TypeName="proyectoModel1.CARACTERISTICA">
+        <MappingFragment StoreEntitySet="CARACTERISTICA">
+          <ScalarProperty Name="CODIGOCARAC" ColumnName="CODIGOCARAC" />
+          <ScalarProperty Name="CODIGOLINEA" ColumnName="CODIGOLINEA" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="CODIGOSUBCARAC" ColumnName="CODIGOSUBCARAC" />
+          <ScalarProperty Name="CODIGOLINEAPRODUCTO" ColumnName="CODIGOLINEAPRODUCTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CARACTERISTICAPRODUCTO">
+      <EntityTypeMapping TypeName="proyectoModel1.CARACTERISTICAPRODUCTO">
+        <MappingFragment StoreEntitySet="CARACTERISTICAPRODUCTO">
+          <ScalarProperty Name="CODIGOCARACTPROD" ColumnName="CODIGOCARACTPROD" />
+          <ScalarProperty Name="CODIGOCARA" ColumnName="CODIGOCARA" />
+          <ScalarProperty Name="CODIGOPRODUCTO" ColumnName="CODIGOPRODUCTO" />
+          <ScalarProperty Name="CODIGOSUBCARAC" ColumnName="CODIGOSUBCARAC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CIUDAD">
+      <EntityTypeMapping TypeName="proyectoModel1.CIUDAD">
+        <MappingFragment StoreEntitySet="CIUDAD">
+          <ScalarProperty Name="CODIGOCIUDAD" ColumnName="CODIGOCIUDAD" />
+          <ScalarProperty Name="CODIGODISTRITO" ColumnName="CODIGODISTRITO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="OTRASSEÑAS" ColumnName="OTRASSEÑAS" />
+          <ScalarProperty Name="CODIGODIRECCION" ColumnName="CODIGODIRECCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENTE">
+      <EntityTypeMapping TypeName="proyectoModel1.CLIENTE">
+        <MappingFragment StoreEntitySet="CLIENTE">
+          <ScalarProperty Name="IDCLIENTE" ColumnName="IDCLIENTE" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDO1" ColumnName="APELLIDO1" />
+          <ScalarProperty Name="APELLIDO2" ColumnName="APELLIDO2" />
+          <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+          <ScalarProperty Name="IDCLIENTE1" ColumnName="IDCLIENTE1" />
+          <ScalarProperty Name="NUMFACTURA" ColumnName="NUMFACTURA" />
+          <ScalarProperty Name="CODDIRECCION" ColumnName="CODDIRECCION" />
+          <ScalarProperty Name="CODCOMPRA" ColumnName="CODCOMPRA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUESTIONARIO">
+      <EntityTypeMapping TypeName="proyectoModel1.CUESTIONARIO">
+        <MappingFragment StoreEntitySet="CUESTIONARIO">
+          <ScalarProperty Name="IDCUESTIONARIO" ColumnName="IDCUESTIONARIO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="IDCUESTIOARIO" ColumnName="IDCUESTIOARIO" />
+          <ScalarProperty Name="IDPREGUNTA" ColumnName="IDPREGUNTA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DIMENSION">
+      <EntityTypeMapping TypeName="proyectoModel1.DIMENSION">
+        <MappingFragment StoreEntitySet="DIMENSION">
+          <ScalarProperty Name="CODIGODIMENSION" ColumnName="CODIGODIMENSION" />
+          <ScalarProperty Name="ANCHO" ColumnName="ANCHO" />
+          <ScalarProperty Name="LARGO" ColumnName="LARGO" />
+          <ScalarProperty Name="VOLUMEN" ColumnName="VOLUMEN" />
+          <ScalarProperty Name="PROFUNDIDAD" ColumnName="PROFUNDIDAD" />
+          <ScalarProperty Name="CODIGOPRODUCTO" ColumnName="CODIGOPRODUCTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DIRECCION">
+      <EntityTypeMapping TypeName="proyectoModel1.DIRECCION">
+        <MappingFragment StoreEntitySet="DIRECCION">
+          <ScalarProperty Name="CODIGODIRECCION" ColumnName="CODIGODIRECCION" />
+          <ScalarProperty Name="CODIGOCIUDAD" ColumnName="CODIGOCIUDAD" />
+          <ScalarProperty Name="NUMFACTURA" ColumnName="NUMFACTURA" />
+          <ScalarProperty Name="IDCLIENTE" ColumnName="IDCLIENTE" />
+          <ScalarProperty Name="CODDIRECCION" ColumnName="CODDIRECCION" />
+          <ScalarProperty Name="CODCOMPRA" ColumnName="CODCOMPRA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DISTRITO">
+      <EntityTypeMapping TypeName="proyectoModel1.DISTRITO">
+        <MappingFragment StoreEntitySet="DISTRITO">
+          <ScalarProperty Name="CODIGODISTRITO" ColumnName="CODIGODISTRITO" />
+          <ScalarProperty Name="CODIGOPROVINCIA" ColumnName="CODIGOPROVINCIA" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="CODIGOCIUDAD" ColumnName="CODIGOCIUDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FACTURA">
+      <EntityTypeMapping TypeName="proyectoModel1.FACTURA">
+        <MappingFragment StoreEntitySet="FACTURA">
+          <ScalarProperty Name="NUMFACTURA" ColumnName="NUMFACTURA" />
+          <ScalarProperty Name="CODIGOMONEDA" ColumnName="CODIGOMONEDA" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="IDCLIENTE" ColumnName="IDCLIENTE" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="CODCOMPRA" ColumnName="CODCOMPRA" />
+          <ScalarProperty Name="CODDIRECCION" ColumnName="CODDIRECCION" />
+          <ScalarProperty Name="CODIGOPRODUCTO" ColumnName="CODIGOPRODUCTO" />
+          <ScalarProperty Name="CODIGODIRECCION" ColumnName="CODIGODIRECCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INVPRODUCTO">
+      <EntityTypeMapping TypeName="proyectoModel1.INVPRODUCTO">
+        <MappingFragment StoreEntitySet="INVPRODUCTO">
+          <ScalarProperty Name="IDPRODUCTO" ColumnName="IDPRODUCTO" />
+          <ScalarProperty Name="IDPROVEEDOR" ColumnName="IDPROVEEDOR" />
+          <ScalarProperty Name="SERIE" ColumnName="SERIE" />
+          <ScalarProperty Name="FACTURA" ColumnName="FACTURA" />
+          <ScalarProperty Name="CODIGOPROVEEDOR" ColumnName="CODIGOPROVEEDOR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LINEA">
+      <EntityTypeMapping TypeName="proyectoModel1.LINEA">
+        <MappingFragment StoreEntitySet="LINEA">
+          <ScalarProperty Name="CODIGOPRODUCTO" ColumnName="CODIGOPRODUCTO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="CODIGOLINEA" ColumnName="CODIGOLINEA" />
+          <ScalarProperty Name="PRECIOXUNIDAD" ColumnName="PRECIOXUNIDAD" />
+          <ScalarProperty Name="NUMFACTURA" ColumnName="NUMFACTURA" />
+          <ScalarProperty Name="FCHPROG" ColumnName="FCHPROG" />
+          <ScalarProperty Name="FCHREAL" ColumnName="FCHREAL" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="IDCLIENTE" ColumnName="IDCLIENTE" />
+          <ScalarProperty Name="CODDIRECCION" ColumnName="CODDIRECCION" />
+          <ScalarProperty Name="CODCOMPRA" ColumnName="CODCOMPRA" />
+          <ScalarProperty Name="CODIGORESPUESTAPERMITIDA" ColumnName="CODIGORESPUESTAPERMITIDA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LINEAPRODUCTO">
+      <EntityTypeMapping TypeName="proyectoModel1.LINEAPRODUCTO">
+        <MappingFragment StoreEntitySet="LINEAPRODUCTO">
+          <ScalarProperty Name="CODIGOLINEAPRODUCTO" ColumnName="CODIGOLINEAPRODUCTO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="CODIGOCARAC" ColumnName="CODIGOCARAC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LISTAPRECIO">
+      <EntityTypeMapping TypeName="proyectoModel1.LISTAPRECIO">
+        <MappingFragment StoreEntitySet="LISTAPRECIO">
+          <ScalarProperty Name="CODIGOLISTAPRECIO" ColumnName="CODIGOLISTAPRECIO" />
+          <ScalarProperty Name="IDCLIENTE" ColumnName="IDCLIENTE" />
+          <ScalarProperty Name="IDPRODUCTO" ColumnName="IDPRODUCTO" />
+          <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+          <ScalarProperty Name="CODIGOPRODUCTO" ColumnName="CODIGOPRODUCTO" />
+          <ScalarProperty Name="IDCLIENTE1" ColumnName="IDCLIENTE1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MONEDA">
+      <EntityTypeMapping TypeName="proyectoModel1.MONEDA">
+        <MappingFragment StoreEntitySet="MONEDA">
+          <ScalarProperty Name="CODIGOMONEDA" ColumnName="CODIGOMONEDA" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PAIS">
+      <EntityTypeMapping TypeName="proyectoModel1.PAIS">
+        <MappingFragment StoreEntitySet="PAIS">
+          <ScalarProperty Name="CODIGOPAIS" ColumnName="CODIGOPAIS" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="CODIGOPROVINCIA" ColumnName="CODIGOPROVINCIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PREGUNTA">
+      <EntityTypeMapping TypeName="proyectoModel1.PREGUNTA">
+        <MappingFragment StoreEntitySet="PREGUNTA">
+          <ScalarProperty Name="IDCUESTIOARIO" ColumnName="IDCUESTIOARIO" />
+          <ScalarProperty Name="IDPREGUNTA" ColumnName="IDPREGUNTA" />
+          <ScalarProperty Name="PREGUNTA1" ColumnName="PREGUNTA" />
+          <ScalarProperty Name="IDCUESTIONARIO" ColumnName="IDCUESTIONARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PREGUNTAPERMITIDA">
+      <EntityTypeMapping TypeName="proyectoModel1.PREGUNTAPERMITIDA">
+        <MappingFragment StoreEntitySet="PREGUNTAPERMITIDA">
+          <ScalarProperty Name="IDCUESTIONARIO" ColumnName="IDCUESTIONARIO" />
+          <ScalarProperty Name="IDPREGUNTA" ColumnName="IDPREGUNTA" />
+          <ScalarProperty Name="PREGUNTA" ColumnName="PREGUNTA" />
+          <ScalarProperty Name="IDRESPUESTACUESTIONARIO" ColumnName="IDRESPUESTACUESTIONARIO" />
+          <ScalarProperty Name="CODIGOLINEA" ColumnName="CODIGOLINEA" />
+          <ScalarProperty Name="CODIGORESPUESTAPERMITIDA" ColumnName="CODIGORESPUESTAPERMITIDA" />
+          <ScalarProperty Name="IDCUESTIOARIO" ColumnName="IDCUESTIOARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUCTO">
+      <EntityTypeMapping TypeName="proyectoModel1.PRODUCTO">
+        <MappingFragment StoreEntitySet="PRODUCTO">
+          <ScalarProperty Name="CODIGOPRODUCTO" ColumnName="CODIGOPRODUCTO" />
+          <ScalarProperty Name="CODIGODIMENSION" ColumnName="CODIGODIMENSION" />
+          <ScalarProperty Name="IDVERSION" ColumnName="IDVERSION" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="IMAGENHD" ColumnName="IMAGENHD" />
+          <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+          <ScalarProperty Name="PESO" ColumnName="PESO" />
+          <ScalarProperty Name="NUMFACTURA" ColumnName="NUMFACTURA" />
+          <ScalarProperty Name="CODIGOCARACTPROD" ColumnName="CODIGOCARACTPROD" />
+          <ScalarProperty Name="CODIGOLISTAPRECIO" ColumnName="CODIGOLISTAPRECIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROVEEDOR">
+      <EntityTypeMapping TypeName="proyectoModel1.PROVEEDOR">
+        <MappingFragment StoreEntitySet="PROVEEDOR">
+          <ScalarProperty Name="CODIGOPROVEEDOR" ColumnName="CODIGOPROVEEDOR" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROVINCIA">
+      <EntityTypeMapping TypeName="proyectoModel1.PROVINCIA">
+        <MappingFragment StoreEntitySet="PROVINCIA">
+          <ScalarProperty Name="CODIGOPROVINCIA" ColumnName="CODIGOPROVINCIA" />
+          <ScalarProperty Name="CODIGOPAIS" ColumnName="CODIGOPAIS" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="CODIGODISTRITO" ColumnName="CODIGODISTRITO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RESPUESTACUESTIONARIO">
+      <EntityTypeMapping TypeName="proyectoModel1.RESPUESTACUESTIONARIO">
+        <MappingFragment StoreEntitySet="RESPUESTACUESTIONARIO">
+          <ScalarProperty Name="CODIGOLINEA" ColumnName="CODIGOLINEA" />
+          <ScalarProperty Name="CODIGORESPUESTAPERMITIDA" ColumnName="CODIGORESPUESTAPERMITIDA" />
+          <ScalarProperty Name="RESPUESTA" ColumnName="RESPUESTA" />
+          <ScalarProperty Name="IDCUESTIONARIO" ColumnName="IDCUESTIONARIO" />
+          <ScalarProperty Name="IDPREGUNTA" ColumnName="IDPREGUNTA" />
+          <ScalarProperty Name="PREGUNTA" ColumnName="PREGUNTA" />
+          <ScalarProperty Name="CODIGOPRODUCTO" ColumnName="CODIGOPRODUCTO" />
+          <ScalarProperty Name="NUMFACTURA" ColumnName="NUMFACTURA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SUBCARACTERISTICAS">
+      <EntityTypeMapping TypeName="proyectoModel1.SUBCARACTERISTICAS">
+        <MappingFragment StoreEntitySet="SUBCARACTERISTICAS">
+          <ScalarProperty Name="CODIGOSUBCARAC" ColumnName="CODIGOSUBCARAC" />
+          <ScalarProperty Name="CODIGOCARAC" ColumnName="CODIGOCARAC" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="CODIGOCARACTPROD" ColumnName="CODIGOCARACTPROD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TARJETA">
+      <EntityTypeMapping TypeName="proyectoModel1.TARJETA">
+        <MappingFragment StoreEntitySet="TARJETA">
+          <ScalarProperty Name="NUMEROTARJETA" ColumnName="NUMEROTARJETA" />
+          <ScalarProperty Name="IDCLIENTE" ColumnName="IDCLIENTE" />
+          <ScalarProperty Name="FCHVENCIMIENTO" ColumnName="FCHVENCIMIENTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONFUGURACION">
+      <EntityTypeMapping TypeName="proyectoModel1.CONFUGURACION">
+        <MappingFragment StoreEntitySet="CONFUGURACION">
+          <ScalarProperty Name="CODIGOVALORESPERMITIDOS" ColumnName="CODIGOVALORESPERMITIDOS" />
+          <ScalarProperty Name="CODIGOLINEA" ColumnName="CODIGOLINEA" />
+          <ScalarProperty Name="CONFIGURACION" ColumnName="CONFIGURACION" />
+          <ScalarProperty Name="CODIGOATRIBUTO" ColumnName="CODIGOATRIBUTO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="CODIGOPRODUCTO" ColumnName="CODIGOPRODUCTO" />
+          <ScalarProperty Name="NUMFACTURA" ColumnName="NUMFACTURA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NAVEGACION">
+      <EntityTypeMapping TypeName="proyectoModel1.NAVEGACION">
+        <MappingFragment StoreEntitySet="NAVEGACION">
+          <ScalarProperty Name="CODIGOCLIENTE" ColumnName="CODIGOCLIENTE" />
+          <ScalarProperty Name="CODIGOSUBCARACTERISTICA" ColumnName="CODIGOSUBCARACTERISTICA" />
+          <ScalarProperty Name="SITIOVISITADO" ColumnName="SITIOVISITADO" />
+          <ScalarProperty Name="IDCLIENTE" ColumnName="IDCLIENTE" />
+          <ScalarProperty Name="CODIGOSUBCARAC" ColumnName="CODIGOSUBCARAC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
