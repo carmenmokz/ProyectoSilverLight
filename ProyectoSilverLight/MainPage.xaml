@@ -10,8 +10,7 @@
     <Grid x:Name="LayoutRoot" Background="White" Margin="0,0,-70,-118">
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="35" Margin="-2,-1,0,0" VerticalAlignment="Top" Width="472" Background="#FF0D8580"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="173,10,0,0" TextWrapping="Wrap" Text="MENÚ PRINCIPAL" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
-        <Button x:Name="button" Content="Consultar Compras de Cliente" HorizontalAlignment="Left" Margin="141,86,0,0" VerticalAlignment="Top" Width="203" Height="34"/>
-        <Button x:Name="button1" Content="Lineas de Facturas no Entregadas" HorizontalAlignment="Left" Margin="141,142,0,0" VerticalAlignment="Top" Width="203" Click="button1_Click" Height="41"/>
-
+        <HyperlinkButton x:Name="ConsultarCompra" NavigateUri="/ConsultarCompra" Content="Consultar Compra de un Cliente" HorizontalAlignment="Left" Margin="131,102,0,0" VerticalAlignment="Top" Click="HyperlinkButton_Click" Height="32" Width="183" Foreground="#FF1A63A2"/>
+    
     </Grid>
 </UserControl>

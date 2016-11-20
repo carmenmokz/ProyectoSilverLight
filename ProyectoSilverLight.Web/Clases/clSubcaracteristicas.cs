@@ -17,7 +17,7 @@ namespace ProyectoSilverLight.Web
         [DataMember] 
         public int CODIGOCARAC { get; set; }
         [DataMember]
-        public String DESCRIPCION { get; set}
+        public String DESCRIPCION { get; set; }
         [DataMember] 
         public int CODIGOCARACTPROD { get; set; } 
 

@@ -170,3 +170,15 @@ C:\Users\carme\Documents\Visual Studio 2015\Projects\ProyectoSilverLight\Proyect
 C:\Users\carme\Documents\Visual Studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\Bin\Debug\vi\System.Windows.Controls.Input.resources.dll
 C:\Users\carme\Documents\Visual Studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\Bin\Debug\zh-Hans\System.Windows.Controls.Input.resources.dll
 C:\Users\carme\Documents\Visual Studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\Bin\Debug\zh-Hant\System.Windows.Controls.Input.resources.dll
+C:\Users\carme\Documents\Visual Studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\Bin\Debug\System.Windows.Controls.Navigation.dll
+C:\Users\carme\Documents\Visual Studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\Bin\Debug\System.Windows.Controls.Navigation.xml
+C:\Users\carme\Documents\Visual Studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\Bin\Debug\de\System.Windows.Controls.Navigation.resources.dll
+C:\Users\carme\Documents\Visual Studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\Bin\Debug\es\System.Windows.Controls.Navigation.resources.dll
+C:\Users\carme\Documents\Visual Studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\Bin\Debug\fr\System.Windows.Controls.Navigation.resources.dll
+C:\Users\carme\Documents\Visual Studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\Bin\Debug\it\System.Windows.Controls.Navigation.resources.dll
+C:\Users\carme\Documents\Visual Studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\Bin\Debug\ja\System.Windows.Controls.Navigation.resources.dll
+C:\Users\carme\Documents\Visual Studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\Bin\Debug\ko\System.Windows.Controls.Navigation.resources.dll
+C:\Users\carme\Documents\Visual Studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\Bin\Debug\ru\System.Windows.Controls.Navigation.resources.dll
+C:\Users\carme\Documents\Visual Studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\Bin\Debug\zh-Hans\System.Windows.Controls.Navigation.resources.dll
+C:\Users\carme\Documents\Visual Studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\Bin\Debug\zh-Hant\System.Windows.Controls.Navigation.resources.dll
+C:\Users\carme\Documents\Visual Studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\obj\Debug\ConsultarCompra.g.cs

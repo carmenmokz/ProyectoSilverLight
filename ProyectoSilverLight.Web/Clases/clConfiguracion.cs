@@ -26,7 +26,7 @@ namespace ProyectoSilverLight.Web
         public int CODIGOPRODUCTO { get; set; }
         [DataMember] 
         public int NUMFACTURA { get; set; } 
-);
+
 
         public clConfiguracion(int codvalorespermitidos, int codlinea, String configuracion, int codatributo, String descripcion,
                             int codproducto, int numfactura)

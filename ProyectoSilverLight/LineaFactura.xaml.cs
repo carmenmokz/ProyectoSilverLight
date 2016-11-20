@@ -9,28 +9,21 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using System.Windows.Navigation;
 
 namespace ProyectoSilverLight
 {
-    public partial class MainPage : UserControl
+    public partial class LineaFactura : Page
     {
-        public MainPage()
+        public LineaFactura()
         {
             InitializeComponent();
         }
 
-        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
+        // Executes when the user navigates to this page.
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-                    }
-
-        private void button1_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
-        private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }
