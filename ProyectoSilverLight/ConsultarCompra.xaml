@@ -7,17 +7,17 @@
            mc:Ignorable="d"
            d:DesignHeight="480"
            Title="Principal Page" Width="471">
-    <Grid x:Name="LayoutRoot" Background="White" Margin="0,0,1,0">
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="35" Margin="-2,-1,0,0" VerticalAlignment="Top" Width="472" Background="#FF0D8580">
-            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Consultar Compras Realizadas Por Un Cliente" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" Margin="37,9,0,0"/>
+    <Grid x:Name="LayoutRoot" Background="White" Margin="0,0,-37,-40">
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="35" Margin="-2,0,0,0" VerticalAlignment="Top" Width="510" Background="#FF0D8580">
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Consultar Compras Realizadas Por Un Cliente" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" Margin="37,9,0,0" FontSize="18"/>
         </Border>
-        <sdk:Label x:Name="label1" HorizontalAlignment="Left" Height="28" Margin="21,62,0,0" VerticalAlignment="Top" Width="178" Content="Ingrese el código del cliente:"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="199,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
-        <sdk:DatePicker HorizontalAlignment="Left" Height="23" Margin="199,114,0,0" VerticalAlignment="Top" Width="120"/>
-        <sdk:Label x:Name="label" HorizontalAlignment="Left" Height="28" Margin="21,114,0,0" VerticalAlignment="Top" Width="162" Content="Seleccione la fecha de inicio: "/>
-        <sdk:Label x:Name="label2" HorizontalAlignment="Left" Height="28" Margin="21,166,0,0" VerticalAlignment="Top" Width="151" Content="Seleccione la fecha final:"/>
-        <sdk:DatePicker HorizontalAlignment="Left" Height="23" Margin="199,166,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="button" Content="Consultar" HorizontalAlignment="Left" Margin="354,166,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-        <ScrollViewer HorizontalAlignment="Left" Height="209" Margin="21,199,0,0" VerticalAlignment="Top" Width="426"/>
+        <sdk:Label x:Name="label1" HorizontalAlignment="Left" Height="28" Margin="21,62,0,0" VerticalAlignment="Top" Width="214" Content="Ingrese el código del cliente:" FontSize="14"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="278,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
+        <sdk:DatePicker HorizontalAlignment="Left" Height="23" Margin="278,114,0,0" VerticalAlignment="Top" Width="120"/>
+        <sdk:Label x:Name="label" HorizontalAlignment="Left" Height="28" Margin="21,114,0,0" VerticalAlignment="Top" Width="214" Content="Seleccione la fecha de inicio: " FontSize="14"/>
+        <sdk:Label x:Name="label2" HorizontalAlignment="Left" Height="28" Margin="21,166,0,0" VerticalAlignment="Top" Width="214" Content="Seleccione la fecha final:" FontSize="14"/>
+        <sdk:DatePicker HorizontalAlignment="Left" Height="23" Margin="278,166,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="button" Content="Consultar" HorizontalAlignment="Left" Margin="294,215,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="254" Margin="21,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="460"/>
     </Grid>
 </navigation:Page>

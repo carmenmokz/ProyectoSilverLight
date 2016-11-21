@@ -30,6 +30,10 @@ namespace ProyectoSilverLight
 
         private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
         {
+        }
+
+        private void HyperlinkButton_Click_1(object sender, RoutedEventArgs e)
+        {
 
         }
     }

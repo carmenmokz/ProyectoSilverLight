@@ -182,3 +182,5 @@ C:\Users\carme\Documents\Visual Studio 2015\Projects\ProyectoSilverLight\Proyect
 C:\Users\carme\Documents\Visual Studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\Bin\Debug\zh-Hans\System.Windows.Controls.Navigation.resources.dll
 C:\Users\carme\Documents\Visual Studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\Bin\Debug\zh-Hant\System.Windows.Controls.Navigation.resources.dll
 C:\Users\carme\Documents\Visual Studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\obj\Debug\ConsultarCompra.g.cs
+C:\Users\carme\Documents\Visual Studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\obj\Debug\LineaFactura.g.cs
+C:\Users\carme\Documents\Visual Studio 2015\Projects\ProyectoSilverLight\ProyectoSilverLight\obj\Debug\ListaCaracteristicaP.g.cs

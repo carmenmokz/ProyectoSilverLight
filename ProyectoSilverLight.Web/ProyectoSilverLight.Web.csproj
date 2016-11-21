@@ -241,6 +241,7 @@
       <DependentUpon>ModelBD.edmx</DependentUpon>
     </Content>
     <Content Include="packages.config" />
+    <Content Include="ClassDiagram1.cd" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
