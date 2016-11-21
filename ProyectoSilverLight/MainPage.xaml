@@ -14,6 +14,7 @@
         <HyperlinkButton x:Name="LineaFacturaBtn" Content="Líneas de Factura no Entregadas" HorizontalAlignment="Left" Margin="119,133,0,0" VerticalAlignment="Top" Foreground="#FF1764A6" Background="#FFEADCDC" Height="27" Width="220"/>
         <HyperlinkButton Content="Clientes Registrados sin Compras" HorizontalAlignment="Left" Margin="119,234,0,0" VerticalAlignment="Top" Click="HyperlinkButton_Click_1" Foreground="#FF38648B" Background="#FFEADCDC" Height="28" Width="220"/>
         <HyperlinkButton Content="Lista de Caracteristicas de un Producto" HorizontalAlignment="Left" Margin="119,184,0,0" VerticalAlignment="Top" Background="#FFEADCDC" Height="28" Foreground="#FF1764A6"/>
+        <HyperlinkButton Content="Mantenimiento de tablas" HorizontalAlignment="Left" Margin="119,288,0,0" VerticalAlignment="Top" Click="HyperlinkButton_Click_1" Foreground="#FF38648B" Background="#FFEADCDC" Height="31" Width="220"/>
 
     </Grid>
 </UserControl>

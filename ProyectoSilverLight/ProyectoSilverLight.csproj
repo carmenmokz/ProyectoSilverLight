@@ -88,6 +88,9 @@
     <Compile Include="ConsultarCompra.xaml.cs">
       <DependentUpon>ConsultarCompra.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MantenimientoTablas.xaml.cs">
+      <DependentUpon>MantenimientoTablas.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -104,6 +107,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ConsultarCompra.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MantenimientoTablas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
