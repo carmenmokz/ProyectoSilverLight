@@ -7,14 +7,16 @@
     mc:Ignorable="d"
     d:DesignHeight="300" d:DesignWidth="400">
 
-    <Grid x:Name="LayoutRoot" Background="White" Margin="0,0,-70,-118">
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="35" Margin="-2,-1,0,0" VerticalAlignment="Top" Width="472" Background="#FF0D8580"/>
+    <Grid x:Name="LayoutRoot" Background="White" Margin="0,0,-392,-118">
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="35" Margin="-2,-1,0,0" VerticalAlignment="Top" Width="794" Background="#FF0D8580"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="173,10,0,0" TextWrapping="Wrap" Text="MENÚ PRINCIPAL" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
-        <HyperlinkButton x:Name="ConsultarCompra" NavigateUri="/ConsultarCompra" Content="Consultar Compra de un Cliente" HorizontalAlignment="Left" Margin="119,75,0,0" VerticalAlignment="Top" Click="HyperlinkButton_Click" Height="32" Width="220" Foreground="#FF1A63A2" Background="#FFEADCDC"/>
-        <HyperlinkButton x:Name="LineaFacturaBtn" Content="Líneas de Factura no Entregadas" HorizontalAlignment="Left" Margin="119,133,0,0" VerticalAlignment="Top" Foreground="#FF1764A6" Background="#FFEADCDC" Height="27" Width="220"/>
-        <HyperlinkButton Content="Clientes Registrados sin Compras" HorizontalAlignment="Left" Margin="119,234,0,0" VerticalAlignment="Top" Click="HyperlinkButton_Click_1" Foreground="#FF38648B" Background="#FFEADCDC" Height="28" Width="220"/>
-        <HyperlinkButton Content="Lista de Caracteristicas de un Producto" HorizontalAlignment="Left" Margin="119,184,0,0" VerticalAlignment="Top" Background="#FFEADCDC" Height="28" Foreground="#FF1764A6"/>
-        <HyperlinkButton Content="Mantenimiento de tablas" HorizontalAlignment="Left" Margin="119,288,0,0" VerticalAlignment="Top" Click="HyperlinkButton_Click_1" Foreground="#FF38648B" Background="#FFEADCDC" Height="31" Width="220"/>
+        <HyperlinkButton x:Name="ConsultarCompraBtn" NavigateUri="/ConsultarCompra" Content="Consultar Compra de un Cliente" HorizontalAlignment="Left" Margin="35,75,0,0" VerticalAlignment="Top" Click="HyperlinkButton_Click" Height="32" Width="220" Foreground="#FF1A63A2" Background="#FFEADCDC"/>
+        <HyperlinkButton x:Name="LineaFacturaBtn" Content="Líneas de Factura no Entregadas" HorizontalAlignment="Left" Margin="35,133,0,0" VerticalAlignment="Top" Foreground="#FF1764A6" Background="#FFEADCDC" Height="27" Width="220"/>
+        <HyperlinkButton x:Name="ClientesSinComprasBtn" Content="Clientes Registrados sin Compras" HorizontalAlignment="Left" Margin="35,232,0,0" VerticalAlignment="Top" Click="HyperlinkButton_Click_1" Foreground="#FF38648B" Background="#FFEADCDC" Height="28" Width="220"/>
+        <HyperlinkButton x:Name="ListaCaracteristicasPBtn" Content="Lista de Caracteristicas de un Producto" NavigateUri="/ListaCaracteristicaP" HorizontalAlignment="Left" Margin="35,182,0,0" VerticalAlignment="Top" Background="#FFEADCDC" Height="28" Foreground="#FF1764A6"/>
+        <HyperlinkButton x:Name="MantTablasBtn" Content="Mantenimiento de tablas" NavigateUri="MantenimientoTablas" HorizontalAlignment="Left" Margin="35,282,0,0" VerticalAlignment="Top" Click="HyperlinkButton_Click_1" Foreground="#FF38648B" Background="#FFEADCDC" Height="31" Width="220"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="280" Margin="294,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="462"/>
+        <sdk:Label x:Name="label" HorizontalAlignment="Left" Height="28" Margin="310,63,0,0" VerticalAlignment="Top" Width="120" Content="Consultas:" FontSize="16"/>
 
     </Grid>
 </UserControl>

@@ -9,7 +9,7 @@
            d:DesignWidth="640" d:DesignHeight="480"
            Title="MantenimientoTablas Page">
     <Grid x:Name="LayoutRoot" Background="White">
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="356,99,0,0" VerticalAlignment="Top" Width="143" Height="27">
+        <ComboBox x:Name="TableComboBox" HorizontalAlignment="Left" Margin="356,99,0,0" VerticalAlignment="Top" Width="143" Height="27">
             <ComboBoxItem Content="Productos" IsSelected="True"/>
             <ComboBoxItem Content="Caracteristicas" IsSelected="True"/>
             <ComboBoxItem Content="Facturas" IsSelected="True"/>
@@ -18,5 +18,13 @@
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="54" Margin="0,1,0,0" VerticalAlignment="Top" Width="640" Background="#FF0A748B"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="68,20,0,0" TextWrapping="Wrap" Text="Modificar Tablas" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Foreground="White" Width="174"/>
         <sdk:Label x:Name="label" HorizontalAlignment="Left" Height="28" Margin="68,102,0,0" VerticalAlignment="Top" Width="246" Content="Seleccione la tabla a modificar: " FontSize="14"/>
+        <sdk:Label x:Name="label1" HorizontalAlignment="Left" Height="28" Margin="68,152,0,0" VerticalAlignment="Top" Width="229" Content="Seleccione la acción a realizar:" FontSize="14"/>
+        <ComboBox x:Name="ActionComboBox" HorizontalAlignment="Left" Margin="356,152,0,0" VerticalAlignment="Top" Width="143" Height="28">
+            <ComboBoxItem Content="Insertar"/>
+            <ComboBoxItem Content="Modificar"/>
+            <ComboBoxItem Content="Borrar"/>
+            <ComboBoxItem Content="Navegación"/>
+            <ComboBoxItem Content="Consulta"/>
+        </ComboBox>
     </Grid>
 </navigation:Page>
